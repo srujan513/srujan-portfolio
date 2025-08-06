@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Send, MessageCircle, Globe, User } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,6 +49,16 @@ const contactItemVariants = {
 };
 
 export default function ContactPage() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+  
   return (
     <motion.div 
       className="container mx-auto px-4 py-12 sm:py-16 relative"
@@ -121,7 +133,7 @@ export default function ContactPage() {
           </span>
           <motion.div
             animate={{ 
-              rotate: [0, 10, -10, 0],
+              
               scale: [1, 1.1, 1]
             }}
             transition={{ 
@@ -277,7 +289,7 @@ export default function ContactPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{}}
+              
               transition={{ duration: 0.5 }}
             >
               <Globe className="w-6 h-6 text-primary" />
