@@ -28,15 +28,15 @@ export default function Home() {
         </div>
         <div className="order-1 flex justify-center lg:order-2">
           <div className="relative h-80 w-80 lg:h-96 lg:w-96">
-            <div className="absolute inset-0 rounded-full bg-primary/20 animate-pulse-slow"></div>
-            <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-primary/50">
+            <div className="absolute inset-0 rounded-full border-4 border-primary/20 border-t-primary animate-spin"></div>
+            <div className="relative h-full w-full overflow-hidden rounded-full">
                 <Image
                   src="/image2.png"
                   alt="Portrait of Srujan Kommagiri"
                   width={400}
                   height={400}
                   priority
-                  className="h-full w-full object-contain dark:grayscale"
+                  className="h-full w-full object-contain dark:grayscale p-2"
                   data-ai-hint="person portrait"
                 />
             </div>
