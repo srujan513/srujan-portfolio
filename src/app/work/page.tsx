@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { projects } from '@/data/work-data';
 import { motion } from 'framer-motion';
 import { Code, ExternalLink, Github, Sparkles, Star, TrendingUp, Eye } from 'lucide-react';
+import Link from 'next/link';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -145,196 +146,198 @@ export default function WorkPage() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
           >
-            <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-primary/10 hover:border-primary/30 relative">
-              {/* Background gradient effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                animate={{
-                  scale: [1, 1.05, 1],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.5
-                }}
-              />
-              
-              {/* Animated border shimmer */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full"
-                animate={{
-                  translateX: ["-100%", "100%"]
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatDelay: 3,
-                  ease: "easeInOut"
-                }}
-              />
-
-              <motion.div
-                whileHover={{ scale: 1.02, y: -8 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative z-10"
-              >
-                <CardHeader>
-                  <motion.div 
-                    className="aspect-video relative mb-4 rounded-lg overflow-hidden"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <Image
-                      src={project.imageUrl}
-                      alt={`Screenshot of ${project.title}`}
-                      fill
-                      className="object-cover transition-all duration-500 group-hover:scale-110"
-                      data-ai-hint={project.imageHint}
-                    />
-                    
-                    {/* Image overlay with icons */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4"
-                    >
-                      <motion.div
-                        className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Eye className="w-4 h-4 text-primary" />
-                      </motion.div>
-                      <motion.div
-                        className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Github className="w-4 h-4 text-primary" />
-                      </motion.div>
-                      <motion.div
-                        className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <ExternalLink className="w-4 h-4 text-primary" />
-                      </motion.div>
-                    </motion.div>
-
-                    {/* Corner decoration */}
-                    <motion.div
-                      className="absolute top-2 right-2 p-1 rounded-full bg-primary/20 backdrop-blur-sm"
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        opacity: [0.5, 1, 0.5],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        delay: index * 0.5,
-                      }}
-                    >
-                      <Star className="w-3 h-3 text-primary" />
-                    </motion.div>
-                  </motion.div>
-                  
-                  <CardTitle className="font-headline group-hover:text-primary transition-colors duration-300 flex items-center gap-3">
-                    <motion.div
-                      whileHover={{ rotate: 15, scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <TrendingUp className="w-5 h-5 text-primary" />
-                    </motion.div>
-                    <motion.span
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      {project.title}
-                    </motion.span>
-                  </CardTitle>
-                  
-                  <CardDescription className="text-foreground/80 group-hover:text-foreground/90 transition-colors duration-300">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
+            <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-primary/10 hover:border-primary/30 relative">
+                {/* Background gradient effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: index * 0.5
+                  }}
+                />
                 
-                <CardContent>
-                  <motion.div 
-                    className="flex flex-wrap gap-2"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                  >
-                    {project.tags.map((tag, tagIndex) => (
-                      <motion.div
-                        key={tag}
-                        variants={badgeVariants}
-                        whileHover={{ 
-                          scale: 1.1, 
-                          y: -3,
-                          backgroundColor: "hsl(var(--primary))",
-                          color: "hsl(var(--primary-foreground))"
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ 
-                          type: "spring", 
-                          stiffness: 400, 
-                          damping: 17,
-                          delay: tagIndex * 0.05
-                        }}
-                        className="cursor-pointer"
-                      >
-                        <Badge 
-                          variant="secondary"
-                          className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-primary/20 hover:border-primary/40 hover:shadow-lg"
-                        >
-                          <motion.span
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: tagIndex * 0.1 }}
-                          >
-                            {tag}
-                          </motion.span>
-                        </Badge>
-                      </motion.div>
-                    ))}
-                  </motion.div>
+                {/* Animated border shimmer */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 -translate-x-full"
+                  animate={{
+                    translateX: ["-100%", "100%"]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeInOut"
+                  }}
+                />
 
-                  {/* Project stats */}
-                  <motion.div
-                    className="mt-4 flex items-center gap-4 text-xs text-muted-foreground"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: index * 0.2 + 1 }}
-                  >
-                    <motion.div
-                      className="flex items-center gap-1"
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -8 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="relative z-10"
+                >
+                  <CardHeader>
+                    <motion.div 
+                      className="aspect-video relative mb-4 rounded-lg overflow-hidden"
                       whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.5 }}
                     >
+                      <Image
+                        src={project.imageUrl}
+                        alt={`Screenshot of ${project.title}`}
+                        fill
+                        className="object-cover transition-all duration-500 group-hover:scale-110"
+                        data-ai-hint={project.imageHint}
+                      />
+                      
+                      {/* Image overlay with icons */}
                       <motion.div
-                        className="w-2 h-2 bg-green-500 rounded-full"
+                        className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center gap-4"
+                      >
+                        <motion.div
+                          className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Eye className="w-4 h-4 text-primary" />
+                        </motion.div>
+                        <motion.div
+                          className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
+                          whileHover={{ scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <Github className="w-4 h-4 text-primary" />
+                        </motion.div>
+                        <motion.div
+                          className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
+                          whileHover={{ scale: 1.1, y: -2 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <ExternalLink className="w-4 h-4 text-primary" />
+                        </motion.div>
+                      </motion.div>
+
+                      {/* Corner decoration */}
+                      <motion.div
+                        className="absolute top-2 right-2 p-1 rounded-full bg-primary/20 backdrop-blur-sm"
                         animate={{
-                          scale: [1, 1.3, 1],
-                          opacity: [0.7, 1, 0.7],
+                          scale: [1, 1.2, 1],
+                          opacity: [0.5, 1, 0.5],
                         }}
                         transition={{
-                          duration: 2,
+                          duration: 3,
                           repeat: Infinity,
-                          delay: index * 0.3,
+                          delay: index * 0.5,
                         }}
-                      />
-                      <span>Live Project</span>
+                      >
+                        <Star className="w-3 h-3 text-primary" />
+                      </motion.div>
                     </motion.div>
-                    <motion.div
-                      className="flex items-center gap-1"
-                      whileHover={{ scale: 1.05 }}
+                    
+                    <CardTitle className="font-headline group-hover:text-primary transition-colors duration-300 flex items-center gap-3">
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <TrendingUp className="w-5 h-5 text-primary" />
+                      </motion.div>
+                      <motion.span
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        {project.title}
+                      </motion.span>
+                    </CardTitle>
+                    
+                    <CardDescription className="text-foreground/80 group-hover:text-foreground/90 transition-colors duration-300">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent>
+                    <motion.div 
+                      className="flex flex-wrap gap-2"
+                      variants={containerVariants}
+                      initial="hidden"
+                      animate="visible"
                     >
-                      <Code className="w-3 h-3 text-primary" />
-                      <span>{project.tags.length} Technologies</span>
+                      {project.tags.map((tag, tagIndex) => (
+                        <motion.div
+                          key={tag}
+                          variants={badgeVariants}
+                          whileHover={{ 
+                            scale: 1.1, 
+                            y: -3,
+                            backgroundColor: "hsl(var(--primary))",
+                            color: "hsl(var(--primary-foreground))"
+                          }}
+                          whileTap={{ scale: 0.95 }}
+                          transition={{ 
+                            type: "spring", 
+                            stiffness: 400, 
+                            damping: 17,
+                            delay: tagIndex * 0.05
+                          }}
+                          className="cursor-pointer"
+                        >
+                          <Badge 
+                            variant="secondary"
+                            className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 border border-primary/20 hover:border-primary/40 hover:shadow-lg"
+                          >
+                            <motion.span
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              transition={{ delay: tagIndex * 0.1 }}
+                            >
+                              {tag}
+                            </motion.span>
+                          </Badge>
+                        </motion.div>
+                      ))}
                     </motion.div>
-                  </motion.div>
-                </CardContent>
-              </motion.div>
-            </Card>
+
+                    {/* Project stats */}
+                    <motion.div
+                      className="mt-4 flex items-center gap-4 text-xs text-muted-foreground"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: index * 0.2 + 1 }}
+                    >
+                      <motion.div
+                        className="flex items-center gap-1"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <motion.div
+                          className="w-2 h-2 bg-green-500 rounded-full"
+                          animate={{
+                            scale: [1, 1.3, 1],
+                            opacity: [0.7, 1, 0.7],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            delay: index * 0.3,
+                          }}
+                        />
+                        <span>Live Project</span>
+                      </motion.div>
+                      <motion.div
+                        className="flex items-center gap-1"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <Code className="w-3 h-3 text-primary" />
+                        <span>{project.tags.length} Technologies</span>
+                      </motion.div>
+                    </motion.div>
+                  </CardContent>
+                </motion.div>
+              </Card>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
