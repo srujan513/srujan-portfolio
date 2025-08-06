@@ -82,7 +82,7 @@ export function Header() {
                 <span className="font-bold font-headline">Srujan</span>
               </Link>
               <div className="flex flex-col space-y-3">
-                <ThemeToggle />
+                <ThemeToggle variant="dropdown" />
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
