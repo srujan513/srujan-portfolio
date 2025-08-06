@@ -26,16 +26,16 @@ export default function AboutMePage() {
         </div>
         <div className="md:col-span-2 space-y-6 text-base text-foreground/90">
             <p>
-                Hello! I'm a dedicated and results-oriented software developer with a knack for creating dynamic and responsive web applications. My passion for technology began with a simple "Hello, World!" and has since grown into a full-fledged career focused on solving complex problems with elegant code.
+                Hello! I'm Srujan Kommagiri, a dedicated and results-oriented software developer with a knack for creating dynamic and responsive web applications. My passion for technology began with a simple "Hello, World!" and has since grown into a full-fledged career focused on solving complex problems with elegant code.
             </p>
             <p>
-                I specialize in front-end development, with a strong command of modern JavaScript frameworks like React and Next.js. I believe that a great user experience is paramount, and I strive to build interfaces that are not only visually appealing but also intuitive and accessible to all users. My toolkit also includes TypeScript, for robust and scalable code, and a variety of styling solutions like Tailwind CSS and styled-components.
+                I specialize in full-stack development with Python, and have a strong command of web technologies like HTML and CSS. I believe that a great user experience is paramount, and I strive to build applications that are not only visually appealing but also intuitive and accessible to all users. My toolkit also includes various programming languages like Java and C++.
             </p>
              <p>
-                Beyond the code, I am a lifelong learner, always eager to explore new technologies and development methodologies. I thrive in collaborative environments and believe that the best products are built by teams that communicate effectively and share a common vision.
+                Beyond the code, I am a lifelong learner, always eager to explore new technologies and development methodologies. I thrive in collaborative environments and believe that the best products are built by teams that communicate effectively and share a common vision. I have strong soft skills in communication, decision making, observation, multi-tasking and problem solving.
             </p>
             <p>
-                When I'm not at my computer, you can find me exploring local trails, experimenting with new recipes in the kitchen, or getting lost in a good book. I believe in a healthy work-life balance and find that my hobbies often inspire my creative approach to problem-solving in my professional life.
+                When I'm not at my computer, you can find me honing my skills on LeetCode or contributing to projects on GitHub. You can find my professional links here: LinkedIn: srujan-kommagiri, GitHub: srujan513, LeetCode: Srujan_5.
             </p>
         </div>
       </div>

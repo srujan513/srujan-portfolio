@@ -3,16 +3,22 @@ import { Separator } from "@/components/ui/separator";
 
 const education = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "University of Technology",
-    period: "2015 - 2017",
-    description: "Focused on software engineering and artificial intelligence. Completed a thesis on machine learning algorithms for natural language processing.",
+    degree: "B.TECH IN CSE",
+    institution: "ALIET, JNTUK",
+    period: "2021 - 2025",
+    description: "CGPA: 7.0/10.0",
   },
   {
-    degree: "Bachelor of Science in Information Technology",
-    institution: "State College",
-    period: "2011 - 2015",
-    description: "Graduated with honors. Active member of the coding club and participated in several hackathons.",
+    degree: "Intermediate",
+    institution: "Sri Sarada Educational Institutions",
+    period: "2020 - 2021",
+    description: "Percentage: 70%",
+  },
+  {
+    degree: "Secondary School",
+    institution: "St. John's EM High School",
+    period: "2019",
+    description: "CGPA: 9.2/10.0",
   },
 ];
 

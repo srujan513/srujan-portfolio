@@ -4,24 +4,36 @@ import { Award } from 'lucide-react';
 
 const certifications = [
   {
-    title: "Certified Next.js Developer",
-    issuer: "Vercel",
-    date: "Issued Jun 2023",
+    title: "Google Data Analytics",
+    issuer: "Google",
   },
   {
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    date: "Issued Dec 2022",
+    title: "Google Project Management",
+    issuer: "Google",
   },
   {
-    title: "Professional Scrum Master I",
-    issuer: "Scrum.org",
-    date: "Issued Mar 2022",
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco",
   },
    {
-    title: "React Nanodegree",
-    issuer: "Udacity",
-    date: "Issued May 2018",
+    title: "Programming Essentials in Python",
+    issuer: "Cisco",
+  },
+  {
+    title: "Introduction to IoT",
+    issuer: "Cisco",
+  },
+  {
+    title: "JavaScript Essentials",
+    issuer: "Cisco",
+  },
+  {
+    title: "SQL Basic",
+    issuer: "HackerRank",
+  },
+  {
+    title: "Python Basic",
+    issuer: "HackerRank",
   },
 ];
 
@@ -44,7 +56,7 @@ export default function CertificationsPage() {
                 <Award className="w-8 h-8 text-primary" />
                 <div>
                     <CardTitle className="font-headline text-lg">{cert.title}</CardTitle>
-                    <CardDescription>{cert.issuer} - {cert.date}</CardDescription>
+                    <CardDescription>{cert.issuer}</CardDescription>
                 </div>
             </CardHeader>
           </Card>

@@ -58,8 +58,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground">Email</h3>
                 <p className="text-muted-foreground">Reach out via email for a quick response.</p>
-                <a href="mailto:hello@persona.dev" className="text-primary hover:underline">
-                  hello@persona.dev
+                <a href="mailto:srujankommagiri5@gmail.com" className="text-primary hover:underline">
+                  srujankommagiri5@gmail.com
                 </a>
               </div>
             </div>
@@ -72,8 +72,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-semibold text-foreground">Phone</h3>
                 <p className="text-muted-foreground">Available for calls during business hours.</p>
-                <a href="tel:+1234567890" className="text-primary hover:underline">
-                  +1 (234) 567-890
+                <a href="tel:+919100397060" className="text-primary hover:underline">
+                  +91 9100397060
                 </a>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">Location</h3>
-                <p className="text-muted-foreground">Based in the beautiful city of San Francisco, CA.</p>
+                <p className="text-muted-foreground">Based in the vibrant city of Vijayawada.</p>
                 <p className="text-primary">Open to remote collaboration.</p>
               </div>
             </div>

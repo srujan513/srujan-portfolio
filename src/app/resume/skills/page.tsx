@@ -3,11 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const skills = {
-  "Programming Languages": ["JavaScript", "TypeScript", "Python", "HTML5", "CSS3"],
-  "Frameworks & Libraries": ["React", "Next.js", "Node.js", "Express", "React Native"],
-  "Databases": ["MongoDB", "PostgreSQL", "Firebase", "SQL"],
-  "Tools & Platforms": ["Git", "Docker", "Vercel", "AWS", "Jira"],
-  "Design": ["Figma", "Adobe XD", "Tailwind CSS", "Sass"],
+  "Programming": ["Python", "Java", "C++", "C"],
+  "Web Technologies": ["HTML", "CSS", "Python Full Stack"],
+  "Specializations": ["Web Application Security", "Penetration Testing", "Digital Voting Systems"],
+  "Soft Skills": ["Communication", "Decision Making", "Observation", "Multi-tasking", "Problem Solving"],
 };
 
 type SkillCategory = keyof typeof skills;

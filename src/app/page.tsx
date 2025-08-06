@@ -9,7 +9,7 @@ export default function Home() {
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-16">
         <div className="order-2 lg:order-1">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Hi, I'm Persona
+            Hi, I'm Srujan Kommagiri
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
             A passionate and creative developer on a mission to build beautiful, functional, and user-centric web experiences. Welcome to my personal corner of the internet.
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="relative h-80 w-80 overflow-hidden rounded-full shadow-2xl lg:h-96 lg:w-96">
             <Image
               src="https://placehold.co/400x400.png"
-              alt="Portrait of the site owner"
+              alt="Portrait of Srujan Kommagiri"
               width={400}
               height={400}
               priority
