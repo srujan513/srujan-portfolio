@@ -1,5 +1,6 @@
-// src/data/resume-data.ts
+// src/data/resume-data.tsx
 import { Briefcase, GraduationCap, Lightbulb, Award, User } from "lucide-react";
+import React from "react";
 
 export const sidebarNavItems = [
     { title: "About Me", href: "/resume", icon: <User className="h-4 w-4" /> },
