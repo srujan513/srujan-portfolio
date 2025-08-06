@@ -1,7 +1,11 @@
+
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -27,9 +31,23 @@ export default function Home() {
           </div>
         </div>
         <div className="order-1 flex justify-center lg:order-2">
-          <div className="relative h-80 w-80 lg:h-96 lg:w-96">
-            <div className="absolute inset-0 rounded-full border-4 border-primary/20 border-t-primary animate-spin-slow"></div>
-            <div className="relative h-full w-full overflow-hidden rounded-full">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
+              }}
+              className="relative w-[300px] h-[300px] xl:w-[498px] xl:h-[498px] flex items-center justify-center"
+            >
+              {/*---image---*/}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 0.9, duration: 0.4, ease: "easeInOut" },
+                }}
+                className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] rounded-full overflow-hidden"
+              >
                 <Image
                   src="/image2.png"
                   alt="Portrait of Srujan Kommagiri"
@@ -39,8 +57,36 @@ export default function Home() {
                   className="h-full w-full object-contain dark:grayscale p-2"
                   data-ai-hint="person portrait"
                 />
-            </div>
-          </div>
+              </motion.div>
+
+              {/*---circle---*/}
+              <motion.svg
+                className="absolute top-0 left-0 w-full h-full"
+                fill="transparent"
+                viewBox="0 0 506 506"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.circle
+                  cx="253"
+                  cy="253"
+                  r="250"
+                  stroke="hsl(var(--primary))"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ strokeDasharray: "24 10 0 0" }}
+                  animate={{
+                    strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+                    rotate: [120, 360],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                />
+              </motion.svg>
+            </motion.div>
         </div>
       </div>
     </div>
