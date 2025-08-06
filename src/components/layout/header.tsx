@@ -31,7 +31,7 @@ export function Header() {
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
             <Zap className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block font-headline">
+            <span className="font-bold font-headline">
               Srujan
             </span>
           </Link>
