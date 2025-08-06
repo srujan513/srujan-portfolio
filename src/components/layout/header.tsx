@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
-import { Menu, BotMessageSquare } from "lucide-react";
+import { Menu, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -30,7 +30,7 @@ export function Header() {
       <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <BotMessageSquare className="h-6 w-6 text-primary" />
+            <Zap className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block font-headline">
               Srujan
             </span>
@@ -78,7 +78,7 @@ export function Header() {
                 className="mb-6 flex items-center space-x-2"
                 onClick={() => setSheetOpen(false)}
               >
-                <BotMessageSquare className="h-6 w-6 text-primary" />
+                <Zap className="h-6 w-6 text-primary" />
                 <span className="font-bold font-headline">Srujan</span>
               </Link>
               <div className="flex flex-col space-y-3">
