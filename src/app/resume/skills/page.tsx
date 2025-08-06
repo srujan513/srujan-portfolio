@@ -1,15 +1,8 @@
+// src/app/resume/skills/page.tsx
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-const skills = {
-  "Programming": ["Python", "Java", "C++", "C"],
-  "Web Technologies": ["HTML", "CSS", "Python Full Stack"],
-  "Specializations": ["Web Application Security", "Penetration Testing", "Digital Voting Systems"],
-  "Soft Skills": ["Communication", "Decision Making", "Observation", "Multi-tasking", "Problem Solving"],
-};
-
-type SkillCategory = keyof typeof skills;
+import { skills, SkillCategory } from "@/data/resume-data";
 
 export default function SkillsPage() {
   return (

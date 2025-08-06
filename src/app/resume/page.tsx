@@ -1,3 +1,4 @@
+// src/app/resume/page.tsx
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 

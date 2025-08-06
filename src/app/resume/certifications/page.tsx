@@ -1,41 +1,8 @@
+// src/app/resume/certifications/page.tsx
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Award } from 'lucide-react';
-
-const certifications = [
-  {
-    title: "Google Data Analytics",
-    issuer: "Google",
-  },
-  {
-    title: "Google Project Management",
-    issuer: "Google",
-  },
-  {
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco",
-  },
-   {
-    title: "Programming Essentials in Python",
-    issuer: "Cisco",
-  },
-  {
-    title: "Introduction to IoT",
-    issuer: "Cisco",
-  },
-  {
-    title: "JavaScript Essentials",
-    issuer: "Cisco",
-  },
-  {
-    title: "SQL Basic",
-    issuer: "HackerRank",
-  },
-  {
-    title: "Python Basic",
-    issuer: "HackerRank",
-  },
-];
+import { certifications } from "@/data/resume-data";
 
 export default function CertificationsPage() {
   return (

@@ -1,32 +1,7 @@
+// src/app/resume/experience/page.tsx
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
-const experiences = [
-  {
-    role: "Data Science Intern",
-    company: "SKILLDZIRE",
-    period: "Vijayawada",
-    description: "Learning data science fundamentals, Python basics, data structures, Pandas, NumPy, and machine learning concepts. Applying knowledge through hands-on exercises and practical implementations.",
-  },
-  {
-    role: "Full Stack Development Intern",
-    company: "DATA VALLEY.AI",
-    period: "Vijayawada",
-    description: "Gained hands-on experience in full stack using Python frameworks. Developed web apps with focus on both frontend and backend technologies. Collaborated with development teams on real-world projects and implementations.",
-  },
-  {
-    role: "Python Full Stack Intern",
-    company: "BRAINOVISION SOLUTIONS PVT LTD.",
-    period: "Vijayawada",
-    description: "Specialized in Python full stack development with emphasis on web application architecture. Implemented backend solutions using Python frameworks and database integration. Participated in code reviews and agile development methodologies.",
-  },
-  {
-    role: "Web App Penetration Testing Intern",
-    company: "INDIAN SERVERS PVT LTD.",
-    period: "Vijayawada",
-    description: "Conducted security assessments and vulnerability testing on web applications. Learned ethical hacking techniques and cybersecurity best practices. Documented security findings and recommended remediation strategies.",
-  },
-];
+import { experiences } from "@/data/resume-data";
 
 export default function ExperiencePage() {
   return (

@@ -1,37 +1,7 @@
-import {
-  Briefcase,
-  GraduationCap,
-  Lightbulb,
-  Award,
-  User,
-} from "lucide-react";
-import Link from "next/link";
+// src/app/resume/layout.tsx
 import { ReactNode } from "react";
 import { ResumeSidebar } from "@/components/resume-sidebar";
-
-const sidebarNavItems = [
-  { title: "About Me", href: "/resume", icon: <User className="h-4 w-4" /> },
-  {
-    title: "Experience",
-    href: "/resume/experience",
-    icon: <Briefcase className="h-4 w-4" />,
-  },
-  {
-    title: "Skills",
-    href: "/resume/skills",
-    icon: <Lightbulb className="h-4 w-4" />,
-  },
-  {
-    title: "Education",
-    href: "/resume/education",
-    icon: <GraduationCap className="h-4 w-4" />,
-  },
-  {
-    title: "Certifications",
-    href: "/resume/certifications",
-    icon: <Award className="h-4 w-4" />,
-  },
-];
+import { sidebarNavItems } from "@/data/resume-data";
 
 export default function ResumeLayout({ children }: { children: ReactNode }) {
   return (
