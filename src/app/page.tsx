@@ -219,7 +219,7 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Image
-                  src="/image2.png"
+                  src="https://placehold.co/400x400.png"
                   alt="Portrait of Srujan Kommagiri"
                   width={400}
                   height={400}

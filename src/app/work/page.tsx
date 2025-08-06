@@ -74,7 +74,6 @@ export default function WorkPage() {
         <motion.div
           className="absolute bottom-32 left-20 w-36 h-36 rounded-full bg-gradient-to-br from-primary/6 to-primary/2 blur-2xl"
           animate={{
-            rotate: [0, 360],
             scale: [1, 1.3, 1],
           }}
           transition={{
@@ -121,7 +120,7 @@ export default function WorkPage() {
             />
           </span>
           <motion.div
-            animate={{ rotate: [0, 360] }}
+            animate={{}}
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
           >
             <Sparkles className="w-6 h-6 text-primary/60" />
@@ -146,7 +145,7 @@ export default function WorkPage() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
           >
-            <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+            <Link href={project.link || '#'} target="_blank" rel="noopener noreferrer" className="block">
               <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-primary/10 hover:border-primary/30 relative">
                 {/* Background gradient effect */}
                 <motion.div
@@ -190,7 +189,8 @@ export default function WorkPage() {
                       <Image
                         src={project.imageUrl}
                         alt={`Screenshot of ${project.title}`}
-                        fill
+                        width={600}
+                        height={400}
                         className="object-cover transition-all duration-500 group-hover:scale-110"
                         data-ai-hint={project.imageHint}
                       />
@@ -351,7 +351,6 @@ export default function WorkPage() {
           className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-primary/5 rounded-full blur-2xl"
           animate={{
             scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
           }}
           transition={{
             duration: 8,
