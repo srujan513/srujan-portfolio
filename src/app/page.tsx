@@ -29,12 +29,12 @@ export default function Home() {
         <div className="order-1 flex justify-center lg:order-2">
           <div className="relative h-80 w-80 overflow-hidden rounded-full shadow-2xl lg:h-96 lg:w-96">
             <Image
-              src="https://placehold.co/400x400.png"
+              src="/image2.png"
               alt="Portrait of Srujan Kommagiri"
               width={400}
               height={400}
               priority
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
               data-ai-hint="person portrait"
             />
           </div>
