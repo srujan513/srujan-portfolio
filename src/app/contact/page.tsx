@@ -105,7 +105,7 @@ export default function ContactPage() {
         >
           <motion.div
             className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-            whileHover={{ rotate: 360, scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <MessageCircle className="w-8 h-8 text-primary" />
@@ -178,7 +178,7 @@ export default function ContactPage() {
             <CardHeader className="relative z-10">
               <CardTitle className="font-headline flex items-center gap-3 group-hover:text-primary transition-colors duration-300">
                 <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Send className="w-5 h-5 text-primary" />
@@ -277,7 +277,7 @@ export default function ContactPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{}}
               transition={{ duration: 0.5 }}
             >
               <Globe className="w-6 h-6 text-primary" />
@@ -297,7 +297,7 @@ export default function ContactPage() {
             >
               <motion.div
                 className="p-3 bg-primary/10 rounded-lg"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 <Mail className="w-6 h-6 text-primary" />
@@ -319,7 +319,7 @@ export default function ContactPage() {
             >
               <motion.div
                 className="p-3 bg-primary/10 rounded-lg"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 <Phone className="w-6 h-6 text-primary" />
@@ -341,7 +341,7 @@ export default function ContactPage() {
             >
               <motion.div
                 className="p-3 bg-primary/10 rounded-lg"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 <MapPin className="w-6 h-6 text-primary" />

@@ -183,7 +183,7 @@ export default function SkillsPage() {
                 <CardHeader className="relative z-10">
                   <CardTitle className="font-headline text-xl flex items-center gap-3">
                     <motion.div
-                      whileHover={{ rotate: 360, scale: 1.2 }}
+                      whileHover={{ scale: 1.2 }}
                       transition={{ duration: 0.5 }}
                       className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300"
                     >

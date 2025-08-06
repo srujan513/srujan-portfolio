@@ -97,7 +97,7 @@ export default function EducationPage() {
         >
           <motion.div
             className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-            whileHover={{ rotate: -15, scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <GraduationCap className="w-8 h-8 text-primary" />
@@ -219,7 +219,7 @@ export default function EducationPage() {
                     <div className="flex-1">
                       <CardTitle className="font-headline text-xl flex items-center gap-3 group-hover:text-primary transition-colors duration-300">
                         <motion.div
-                          whileHover={{ rotate: 360, scale: 1.1 }}
+                          whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.6 }}
                         >
                           <BookOpen className="w-5 h-5 text-primary" />
@@ -326,7 +326,7 @@ export default function EducationPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{ rotate: -360 }}
+              whileHover={{}}
               transition={{ duration: 0.5 }}
             >
               <GraduationCap className="w-6 h-6 text-primary" />

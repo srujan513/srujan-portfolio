@@ -95,7 +95,7 @@ export default function CertificationsPage() {
         >
           <motion.div
             className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-            whileHover={{ rotate: 360, scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <Award className="w-8 h-8 text-primary" />
@@ -167,7 +167,7 @@ export default function CertificationsPage() {
               <CardHeader className="flex flex-row items-center gap-4 relative z-10">
                 <motion.div 
                   className="p-3 rounded-lg bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors duration-300"
-                  whileHover={{ rotate: 360, scale: 1.15 }}
+                  whileHover={{ scale: 1.15 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   animate={{
                     boxShadow: [
@@ -266,7 +266,7 @@ export default function CertificationsPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{}}
               transition={{ duration: 0.5 }}
             >
               <Award className="w-6 h-6 text-primary" />

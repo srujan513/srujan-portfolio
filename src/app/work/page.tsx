@@ -105,7 +105,7 @@ export default function WorkPage() {
         >
           <motion.div
             className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-            whileHover={{ rotate: 360, scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <Code className="w-8 h-8 text-primary" />
@@ -199,14 +199,14 @@ export default function WorkPage() {
                     >
                       <motion.div
                         className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
-                        whileHover={{ scale: 1.1, rotate: 360 }}
+                        whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                       >
                         <Eye className="w-4 h-4 text-primary" />
                       </motion.div>
                       <motion.div
                         className="p-2 rounded-full bg-background/80 backdrop-blur-sm"
-                        whileHover={{ scale: 1.1, rotate: -360 }}
+                        whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                       >
                         <Github className="w-4 h-4 text-primary" />
@@ -363,7 +363,7 @@ export default function WorkPage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{}}
               transition={{ duration: 0.5 }}
             >
               <Code className="w-6 h-6 text-primary" />

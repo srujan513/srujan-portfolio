@@ -82,7 +82,7 @@ export default function ExperiencePage() {
         >
           <motion.div
             className="p-3 rounded-lg bg-primary/10 border border-primary/20"
-            whileHover={{ rotate: 360, scale: 1.1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
             <Briefcase className="w-8 h-8 text-primary" />
@@ -302,7 +302,7 @@ export default function ExperiencePage() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{}}
               transition={{ duration: 0.5 }}
             >
               <Briefcase className="w-6 h-6 text-primary" />
