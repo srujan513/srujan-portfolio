@@ -58,8 +58,12 @@ export function ThemeToggle({ variant = "button" }: { variant?: "button" | "drop
   };
 
   if (!mounted) {
-    // To avoid hydration mismatch, we render nothing on the server.
-    return null;
+    if (variant === 'button') {
+      return <div className="h-10 w-10" />;
+    }
+     return (
+        <div className="flex items-center justify-between h-10 w-full" />
+    )
   }
 
   if (variant === "dropdown") {
