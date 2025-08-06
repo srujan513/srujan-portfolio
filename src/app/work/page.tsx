@@ -187,13 +187,14 @@ export default function WorkPage() {
                       transition={{ duration: 0.5 }}
                     >
                       <Image
-                        src={project.imageUrl}
-                        alt={`Screenshot of ${project.title}`}
-                        width={600}
-                        height={400}
-                        className="object-cover transition-all duration-500 group-hover:scale-110"
-                        data-ai-hint={project.imageHint}
-                      />
+  src={project.imageUrl}
+  alt={`Screenshot of ${project.title}`}
+  width={600}
+  height={400}
+  className="object-cover transition-all duration-500 group-hover:scale-110"
+  data-ai-hint={project.imageHint}
+/>
+
                       
                       {/* Image overlay with icons */}
                       <motion.div

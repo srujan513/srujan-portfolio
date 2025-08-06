@@ -9,6 +9,14 @@ export const projects = [
       link: 'https://secure-share-gradgear.vercel.app/',
     },
     {
+      title: 'Agri Assist',
+      description: 'An intelligent platform to assist farmers with modern agricultural solutions, powered by AI.',
+      tags: ['Next.js', 'React', 'AI', 'Agriculture'],
+      imageUrl: '/agriAssist.png',
+      imageHint: 'agriculture technology',
+      link: 'https://agri-assist-xi.vercel.app/',
+    },
+    {
       title: 'Project Alpha',
       description: 'A cutting-edge e-commerce platform built with Next.js and serverless technologies, focusing on performance and user experience.',
       tags: ['Next.js', 'React', 'Tailwind CSS', 'Stripe'],
