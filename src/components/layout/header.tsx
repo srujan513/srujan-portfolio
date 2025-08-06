@@ -27,40 +27,41 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
+      <div className="container flex h-14 items-center justify-between">
         <div className="flex items-center space-x-2">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <BotMessageSquare className="h-6 w-6 text-primary" />
             <span className="hidden font-bold sm:inline-block font-headline">
               Srujan
             </span>
           </Link>
-          <div className="hidden items-center space-x-2 md:flex">
-             <ThemeToggle />
-            <nav className="flex items-center space-x-6 text-sm font-medium">
-              {navLinks.map((link) => {
-                const isActive =
-                  link.href === "/"
-                    ? pathname === link.href
-                    : pathname.startsWith(link.href);
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      "transition-colors hover:text-foreground/80",
-                      isActive ? "text-foreground" : "text-foreground/60"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </nav>
-          </div>
         </div>
         
-        <div className="flex flex-1 items-center justify-end md:hidden">
+        <div className="hidden items-center space-x-2 md:flex">
+           <ThemeToggle />
+          <nav className="flex items-center space-x-6 text-sm font-medium">
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === link.href
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "transition-colors hover:text-foreground/80",
+                    isActive ? "text-foreground" : "text-foreground/60"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+
+        <div className="flex items-center md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button
@@ -81,6 +82,7 @@ export function Header() {
                 <span className="font-bold font-headline">Srujan</span>
               </Link>
               <div className="flex flex-col space-y-3">
+                <ThemeToggle />
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
