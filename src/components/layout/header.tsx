@@ -24,6 +24,12 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -38,7 +44,7 @@ export function Header() {
         </div>
         
         <div className="hidden items-center space-x-2 md:flex">
-           <ThemeToggle />
+          {mounted && <ThemeToggle />}
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => {
               const isActive =
@@ -82,7 +88,7 @@ export function Header() {
                 <span className="font-bold font-headline">Srujan</span>
               </Link>
               <div className="flex flex-col space-y-3">
-                <ThemeToggle variant="dropdown" />
+                {mounted && <ThemeToggle variant="dropdown" />}
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
