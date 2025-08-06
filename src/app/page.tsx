@@ -92,12 +92,6 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 Srujan Kommagiri
-                <motion.div
-                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-                />
               </motion.span>
             </motion.h1>
 
