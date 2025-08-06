@@ -34,7 +34,7 @@ export default function Home() {
               width={400}
               height={400}
               priority
-              className="h-full w-full object-contain"
+              className="h-full w-full object-contain dark:grayscale"
               data-ai-hint="person portrait"
             />
           </div>
