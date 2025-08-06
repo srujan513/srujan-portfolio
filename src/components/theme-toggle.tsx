@@ -47,10 +47,26 @@ export function ThemeDropdown() {
 
 export function ThemeToggle({ variant = "button" }: { variant?: "button" | "dropdown" }) {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
+
+  if (!mounted) {
+    // Render a placeholder or nothing on the server to avoid hydration mismatch
+    if (variant === 'button') {
+      return <div className="h-10 w-10" />;
+    }
+    return <div className="flex items-center justify-between h-10">
+      <span className="text-muted-foreground">Theme</span>
+      <div className="w-[84px] h-[36px]" />
+    </div>;
+  }
 
   if (variant === "dropdown") {
     return (
