@@ -30,7 +30,6 @@ export function Header() {
     setMounted(true);
   }, []);
 
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
@@ -43,9 +42,7 @@ export function Header() {
           </Link>
         </div>
         
-        <div className="hidden items-center space-x-2 md:flex">
-          {mounted && <ThemeToggle />}
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -65,48 +62,56 @@ export function Header() {
               );
             })}
           </nav>
-        </div>
 
-        <div className="flex items-center md:hidden">
-          <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
-              >
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="pr-0">
-              <Link
-                href="/"
-                className="mb-6 flex items-center space-x-2"
-                onClick={() => setSheetOpen(false)}
-              >
-                <Zap className="h-6 w-6 text-primary" />
-                <span className="font-bold font-headline">Srujan</span>
-              </Link>
-              <div className="flex flex-col space-y-3">
-                {mounted && <ThemeToggle variant="dropdown" />}
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setSheetOpen(false)}
-                    className={cn(
-                      "transition-colors hover:text-foreground",
-                      pathname?.startsWith(link.href)
-                        ? "text-foreground"
-                        : "text-muted-foreground"
-                    )}
+        <div className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
+          <div className="flex items-center md:hidden">
+            {mounted ? (
+              <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+                <SheetTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
                   >
-                    {link.label}
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="pr-0">
+                  <Link
+                    href="/"
+                    className="mb-6 flex items-center space-x-2"
+                    onClick={() => setSheetOpen(false)}
+                  >
+                    <Zap className="h-6 w-6 text-primary" />
+                    <span className="font-bold font-headline">Srujan</span>
                   </Link>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+                  <div className="flex flex-col space-y-3">
+                    <ThemeToggle variant="dropdown" />
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setSheetOpen(false)}
+                        className={cn(
+                          "transition-colors hover:text-foreground",
+                          pathname?.startsWith(link.href)
+                            ? "text-foreground"
+                            : "text-muted-foreground"
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </SheetContent>
+              </Sheet>
+            ) : (
+               <div className="h-9 w-9" />
+            )}
+          </div>
         </div>
       </div>
     </header>
