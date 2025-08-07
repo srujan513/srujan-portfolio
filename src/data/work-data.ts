@@ -12,7 +12,7 @@ export const projects = [
       title: 'Agri Assist',
       description: 'An intelligent platform to assist farmers with modern agricultural solutions, powered by AI.',
       tags: ['Next.js', 'React', 'AI', 'Agriculture'],
-      imageUrl: '/agriAssist.png',
+      imageUrl: '/agriAssistImage.png',
       imageHint: 'agriculture technology',
       link: 'https://agri-assist-xi.vercel.app/',
     }
